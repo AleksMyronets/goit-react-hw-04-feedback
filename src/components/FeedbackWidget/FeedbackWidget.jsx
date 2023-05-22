@@ -5,9 +5,9 @@ import { Section } from '../Section';
 import { Notification } from '../Notification';
 
 export const Feedback = () => {
-  const [good, setGood] = useState[0];
-  const [neutral, setNeutral] = useState[0];
-  const [bad, setBad] = useState[0];
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
 
   const feedBackName = { good, neutral, bad };
 
@@ -53,4 +53,3 @@ export const Feedback = () => {
     </div>
   );
 }
-
