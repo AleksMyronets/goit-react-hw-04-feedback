@@ -33,18 +33,18 @@ export const Feedback = () => {
     <div>
       <Section title="Please, leave feedback">
         <FeedbackOptions
-          options={Object.keys(this.state)}
-          onLeaveFeedback={this.onLeaveFeedback}
+          options={Object.keys(feedBackName)}
+          onLeaveFeedback={onLeaveFeedback}
         />
       </Section>
       <Section title="Statistics">
-        {this.countTotalFeedback() > 0 ? (
+        {countTotalFeedback() > 0 ? (
           <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.countTotalFeedback()}
-            positivePercentage={this.countPositiveFeedbackPercentage()}
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={countTotalFeedback()}
+            positivePercentage={countPositiveFeedbackPercentage()}
           />
         ) : (
           <Notification massage="There is no feedback" />
